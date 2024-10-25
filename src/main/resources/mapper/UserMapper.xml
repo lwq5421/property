@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.UserMapper">
+<!--    <select id="findUsersByType" resultType="com.example.demo.pojo.user.User">-->
+<!--        select userid,username,account,idcard,gender,age,user_type,user_status,user_roomid from user where user_type = #{user_type}-->
+<!--        <if test='condition != null and condition !=""'>-->
+<!--            and (username like concat('%',#{condition},'%') or idcard like concat('%',#{condition},'%'))-->
+<!--        </if>-->
+<!--    </select>-->
+<!--    <select id="selectById" resultType="com.example.demo.pojo.user.User">-->
+<!--        Select("select userid,username,account,idcard,gender,age,user_type,user_status,user_roomid from user where userid = #{id}")-->
+<!--               User selectById(Integer id);-->
+<!--    </select>-->
+
+<!--    <select id="selectById" parameterType="int" resultType="com.example.demo.pojo.user.User">-->
+<!--        SELECT userid, username, account, idcard, gender, age, user_type, user_status, user_roomid-->
+<!--        FROM user-->
+<!--        WHERE userid = #{id}-->
+<!--    </select>-->
+
+
+    <!--    <select id="updateAvatar" resultType="java.lang.Integer">-->
+<!--        update user set user_avatar = #{user_avatar} where userid = #{userid}-->
+<!--    </select>-->
+
+
+</mapper>
+
+
+        <!--    <select id="queryOnCondition" resultType="com.example.demo.pojo.user.User">-->
+        <!--        select count(1) from user-->
+        <!--    </select>-->
+<!--        在MyBatis中，`namespace`是Mapper接口的全限定名。它用于将Mapper接口与对应的XML文件关联起来。通过`namespace`，MyBatis可以知道哪个接口定义了哪个SQL语句，从而正确地执行相应的数据库操作。-->
+
+<!--        例如，在上述XML配置中：-->
+
+<!--        ```xml-->
+<!--<mapper namespace="com.example.demo.mapper.UserMapper">-->
+<!--```-->
+
+<!--`namespace`的值是`com.example.demo.mapper.UserMapper`，这意味着这个XML文件定义了`com.example.demo.mapper.UserMapper`接口中的SQL语句。这样，当调用`UserMapper`接口中的方法时，MyBatis会根据`namespace`找到对应的XML文件，并执行相应的SQL语句。-->
+
+<!--这样做的好处是，可以清晰地分离接口定义和SQL语句的实现，使得代码结构更加清晰，易于维护。同时，`namespace`也可以避免不同Mapper接口中的方法名冲突。-->
+<!--        namespace的值是com.example.demo.mapper.UserMapper，这意味着这个XML文件定义了com.example.demo.mapper.UserMapper接口中的SQL语句。这样，当调用UserMapper接口中的方法时，MyBatis会根据namespace找到对应的XML文件，并执行相应的SQL语句。-->
+
+<!--        这样做的好处是，可以清晰地分离接口定义和SQL语句的实现，使得代<mapper namespace="com.example.demo.mapper.UserMapper">
+    <select id="queryOnCondition" resultType="com.example.demo.pojo.user.User">
+        select * from user
+    </select>
+</mapper>码结构更加清晰，易于维护。同时，namespace也可以避免不同Mapper接口中的方法名冲突。-->
